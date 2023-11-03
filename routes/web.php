@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//vista clase
 Route::get('/', function () {
     return view('principal');
 });
+
+//controlador
+Route::get('/sing-up', [RegisterController::class,'index']);

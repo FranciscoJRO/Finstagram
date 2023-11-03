@@ -15,7 +15,7 @@
             <h1 class="text-3xl font-black">Finstagram</h1>
             <na class="flex gap-3 items-center">
                 <a class="font-bold uppercase text-emerald-400 text-sm" href="#">Log in</a>
-                <a class="font-bold uppercase text-emerald-400 text-sm" href="#">Sing up</a>
+                <a class="font-bold uppercase text-emerald-400 text-sm" href="/sing-up">Sing up</a>
             </nav>
             </div>
         </header>
@@ -29,7 +29,7 @@
         </main>
 
 
-        <footer class="text-center p-5 text-gray-500 font-bold uppercase">
+        <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
             Finstagram- Todos los derechos reservados 
             {{now()->year}}
             
