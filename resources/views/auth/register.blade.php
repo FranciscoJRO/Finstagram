@@ -12,7 +12,8 @@
     </div>
 
     <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
-        <form>
+        <form action="{{route('register')}}" method="POST">
+            @csrf
             <div class="mb-5">
                 <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">
                     Nombre
@@ -22,8 +23,15 @@
                     name="name"
                     type="text"
                     placeholder="Tu Nombre"
-                    class="border p-3 w-full rounded-lg"
+                    class="border p-3 w-full rounded-lg @error('name') border-red-400"    
+                    @enderror"
+                    value="{{old('name')}}""
                 />
+                @error('name')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm  text-center p-2">
+                        {{$message}}
+                    </p>
+                @enderror
             </div>
             <div class="mb-5">
                 <label for="username" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -36,6 +44,11 @@
                     placeholder="Tu Nombre de Usuario"
                     class="border p-3 w-full rounded-lg"
                 />
+                @error('username')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm  text-center p-2">
+                        {{$message}}
+                    </p>
+                @enderror
             </div>
             <div class="mb-5">
                 <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -48,6 +61,11 @@
                     placeholder="Tu Email de Registro"
                     class="border p-3 w-full rounded-lg"
                 />
+                @error('email')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm  text-center p-2">
+                        {{$message}}
+                    </p>
+                @enderror
             </div>
             <div class="mb-5">
                 <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -60,6 +78,11 @@
                     placeholder="Password de Registor"
                     class="border p-3 w-full rounded-lg"
                 />
+                @error('password')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm  text-center p-2">
+                        {{$message}}
+                    </p>
+                @enderror
             </div>
             <div class="mb-5">
                 <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -77,7 +100,8 @@
             <input 
             type="submit"
             value="Crear cuenta"
-            class="bg-emerald-400 hover:bg-emerald-600 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg"
+            class="bg-emerald-400 hover:bg-emerald-600 transition-colors cursor-pointer uppercase font-bold w-full p-3
+             text-white rounded-lg"
             
             
             />

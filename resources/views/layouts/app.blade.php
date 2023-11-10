@@ -13,9 +13,9 @@
         <header class="p-5 border-d bg-white shadow">
             <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-black">Finstagram</h1>
-            <na class="flex gap-3 items-center">
+            <nav class="flex gap-3 items-center">
                 <a class="font-bold uppercase text-emerald-400 text-sm" href="#">Log in</a>
-                <a class="font-bold uppercase text-emerald-400 text-sm" href="/sing-up">Sing up</a>
+                <a class="font-bold uppercase text-emerald-400 text-sm" href="{{route('register')}}">Sing up</a>
             </nav>
             </div>
         </header>

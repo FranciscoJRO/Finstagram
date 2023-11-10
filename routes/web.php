@@ -19,5 +19,9 @@ Route::get('/', function () {
     return view('principal');
 });
 
-//controlador
-Route::get('/sing-up', [RegisterController::class,'index']);
+//controlador tiene la misma url pero diferente Request 
+
+//get para visitar un citio web
+Route::get('/sing-up', [RegisterController::class,'index'])->name('register');
+//post cuando envias informacion en un servidor
+Route::post('/sing-up', [RegisterController::class,'store'])->name('register');
